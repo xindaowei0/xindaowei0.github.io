@@ -1,0 +1,33 @@
+meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes')
+
+#menu-outer
+    //- site name
+    .site-name
+        if theme.logo.on
+            a(href="") 
+                img(src=theme.logo.url)
+        else 
+            a= config.author
+    div.search
+        if theme.localSearch.on
+            input#local-search-input(tpye="text" placeholder=__(`localSearch.placeholder`))
+            span.search-icon
+                i.fa.fa-search
+            div#local-search-result.local-search-result-cls(data-empty=__("localSearch.empty") data-first=__("localSearch.first"))
+    .menu
+        //- the button of hidden menu for phone
+        ul.menu-icon
+            li
+            li
+            li
+        ul#nav
+            img.menu-avatar(src=theme.avatar)
+            div.menu-items
+                each label, index in theme.menu
+                    li.item-name
+                        a.name-a(href=url_for(label.path))!='<i class="fas fa-' + label.ico + '"></i> ' + (__(`header.${index}`) == "header."+index ? index : __(`header.${index}`))
+                        if label.submenu
+                            ul.submenu-items
+                                each sublabel, subindex in label.submenu
+                                    li.subitem-name
+                                        a(href=url_for(sublabel.path))!= '<i class="fas fa-' + sublabel.ico + '"></i> ' + (__(`header.${subindex}`) == "header."+subindex ? subindex : __(`header.${subindex}`))

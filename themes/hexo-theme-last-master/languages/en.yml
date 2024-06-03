@@ -1,0 +1,43 @@
+toc: Catalog
+
+header:
+  Home: Home
+  Category: Category
+  Archives: Archives
+  Tag: Tag
+  Friends: Friends
+  About: About
+  Lab: Lab
+  Project: Project
+  Theme: Theme
+  Me: Me
+  Memory: Memory
+
+sideUser:
+  donate: DONATE
+  about: ABOUT  
+
+copyright:
+  author: Author
+  link: Link
+  license: License
+  content: All articles in this blog are licensed under <a href="%s">%s</a> unless stating additionally.
+
+sideButtons:
+  backToTop: TOP
+  toComment: COMMENT
+
+localSearch:
+  placeholder: Type to search
+  empty: (っ╥╯﹏╰╥c) Sorry I can't find the word, please try another word
+  first: First Search, loading index file... please wait
+
+origin: ORIGIN
+
+category:
+  categories: Categories
+  category: Category
+  tags: Tags
+  tag: TAG
+
+readmore: Read More

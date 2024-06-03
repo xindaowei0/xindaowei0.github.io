@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "fontawesome";
+    src: url("/font-awesome/webfonts/fa-solid-900.eot");
+    src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), 
+         url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), 
+         url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), 
+         url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg")
+}
+$isCustomize = hexo-config("themeColor.on") || false
+if $isCustomize
+    $defaultMainColor = convert(hexo-config("themeColor.mainColorSeries")) || 'black'
+    $defaultMinorColor = convert(hexo-config("themeColor.minorColorSeries")) || '#d31b29'
+    // if $defaultMainColor == 'black'
+
+$bg = #202020
+$minorColor = $defaultMinorColor
+
+$headerBg = #191919
+$headerSubBg = #333333
+$headerCt = #ffffff // content
+$headerHv = $minorColor //#ff0000 hover
+$headerPostBg = #ffffff
+$headerPostSubBg = #ffffff
+$headerPostCt = #808080 // content
+
+
+$homeTm = #737373
+$homeMainTx = #ffffff
+$homeCt = #bfbfbf
+$homeRowMaxItem = hexo-config("homeRowMaxItem") || 6
+
+$postBg = #ffffff
+$sInfoTp = #808080
+$sInfoBg = #d3d3d3
+$sInfoTx = #666666

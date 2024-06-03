@@ -1,0 +1,25 @@
+@import "themes/variable.styl"
+
+
+$scroll-bar-color = convert(hexo-config("ScrollBar.color")) || $minorColor
+
+if $scroll-bar-color == "default"
+    $scroll-bar-color = convert("#999")
+else if $scroll-bar-color == "theme"
+    $scroll-bar-color = $minorColor
+
+$scroll-bar-radius = hexo-config("ScrollBar.radius") || 10
+
+$scroll-bar-style = hexo-config("ScrollBar.style") || "bicolor"
+@import 'includes/scroll-bar/' + $scroll-bar-style + '.styl'
+
+html 
+    overflow-x: hidden
+body
+  margin 0
+  overflow-x: hidden
+  background-color: $bg
+
+
+#content-outer
+    margin-top: 75px

@@ -1,0 +1,47 @@
+header:
+  Home: 主页
+  Category: 分类
+  Archives: 归档
+  Tag: 标签
+  Friends: 友链
+  About: 关于
+  Lab: 实验室
+  Project: 项目
+  Theme: 主题
+  Me: 博主
+  Memory: 回忆
+
+toc: 目录
+
+sideUser:
+  donate: 打赏
+  about: 简介
+
+copyright:
+  author: 作者
+  link: 链接
+  license: 版权声明
+  content: 本博客所有文章除特别声明外，均采用 <a href="%s">%s</a> 许可协议。转载请注明原链接！
+
+sideButtons:
+  backToTop: 顶部
+  toComment: 评论
+
+localSearch:
+  placeholder: 键入搜索
+  empty: (っ╥╯﹏╰╥c) 很抱歉没有查到这个词，请换一个词查询
+  firstSearch: 第一次搜索，正在加载 index 文件... 请稍等
+
+origin: 原创
+
+category:
+  categories: 分类
+  category: 分类
+  tags: 标签
+  tag: 标签
+
+readmore: 阅读更多
+
+copy:
+  success: 复制成功！
+  error: 复制失败，请重新尝试！

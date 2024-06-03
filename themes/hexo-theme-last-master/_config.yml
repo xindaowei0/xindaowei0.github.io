@@ -1,0 +1,323 @@
+# main menu navigation
+menu:
+  Home: 
+    path: /
+    ico: home
+  Category:
+    path: 
+    ico: list
+    submenu: 
+      Creativiy:
+        path: /categories/life
+        ico: lightbulb
+      Art:
+        path: /art
+        ico: palette
+      Math:
+        path: /
+        ico: chart-bar
+      Physisc:
+        path: /
+        ico: atom
+      Economy:
+        path: /
+        ico: yen-sign
+  Archives:
+    path: /archives
+    ico: archive
+  Tag:
+    path: /tags
+    ico: tag
+  # About:
+  #   path: "#"
+  #   ico: lightbulb
+  #   submenu:
+  #     Me:
+  #       path: /about
+  #       ico: heart
+  #     Theme:
+  #       path: /theme-last-guide/site/
+  #       ico: puzzle-piece
+  Last:
+    path: /theme-last-guide/site
+    ico: puzzle-piece
+  Friends:
+    path: /links
+    ico: link
+
+# Avatar 头像
+avatar: https://cdn.jsdelivr.net/gh/DyingDown/img-host-repo/202304301831010.jpeg #https://s1.ax1x.com/2020/04/17/JEjcB8.png #https://cdn.jsdelivr.net/gh/DyingDown/img-host-repo/202304150220218.png
+# Site logo, if true, it replace the place of site name 
+# by using image or svg 
+logo: 
+  on: false
+  url: /img/o_oyao.svg
+
+#是否开启“关于我”
+aboutme: "&nbsp;&nbsp;The Jigsaw puzzle is incomplete with even one missing piece. And I want to be the last piece to make the puzzle complete."
+
+themeColor:
+  on: true
+  mainColorSeries: black # white
+  minorColorSeries: "rgb(98,185,0)" # "#d31b29" rgb(98,185,0)
+  customize: 
+    on: true
+    mainColor: "#fff"
+    minorColor: "#d31b29"
+
+archiveStyle:
+  style: normal # comment-shape, normal
+  type: center # basic, split, center
+  # color: 
+
+# categories & tags
+tagsPage:
+  category:
+    show_count: true # false
+  tag:
+    show_count: false # false
+
+homeCover:
+  fixed: true
+  url: ss
+
+# Carousel: Scroll and loop articles 轮播图:滚动循环播放文章。
+# add "isCarousel: true" to each post's information to enable carousel of the post
+# 给post顶部添加 “isCarousel: true” 来使文章在轮播图中显示
+carousel:
+  on: true # false
+  prevNext: true
+  indicators: # the indicator dots under the pictures 图片下面的点指示器
+    on: true
+    position: left # left, center, right
+    style: line # dot, line
+    currentColor:
+      color: "#222" # Hex or color name 16进制的颜色或者颜色名字
+      opacity: 0.9 # float number 0 - 1 eg. 0.55
+    otherColor:
+      color: "white" # Hex or color name 16进制的颜色或者颜色名字
+      opacity: 1 # float number 0 - 1 eg. 0.55
+  mask:
+    on: true
+    color: "#000" # Hex or color name 16进制的颜色或者颜色名字
+    opacity: 0.5 # float number 0 - 1 eg. 0.55
+  blur:
+    on: true
+    px: 20
+    frostedGlassCard: true
+  textColor: "#fff" # Hex or color name 16进制的颜色或者颜色名字
+
+# Search Function
+# need to install hexo-generator-search and have the setting in root _config.yml file like this
+# search:
+#   path: search.xml
+#   field: all
+#   content: true
+localSearch:
+  on: true
+
+##### Home page
+# the number of lines show of each post's description
+clampLines: 8 # any number
+
+# max articles shown in each row
+homeRowMaxItem: 6 ## 3-6
+
+# home page patination style: true with background, false not
+paginationNumberBackground: true # false
+
+# style of post page pagination 
+postPagePaginationStyle: card # normal  picture  card
+
+## style of alert message
+alertStyle:
+  colorBackground: true # false will use page's background
+  position: center # right, center, left
+
+# Share function 分享功能
+# https://github.com/overtrue/share.js
+Share:
+  on: true # if this is false, the flowing are useless 如果这个选为false,则下面的都没用了
+  datasites: "facebook,twitter,qq,wechat,qzone,weibo" # You can combine these arbitrarily 你可以任意的组合这些
+  # there are facebook,linkedin, twitter, qq, douban, wechat, qzone, weibo
+  wechatQrcodeTitle: "微信扫一扫：Share"
+
+# format of your toc directory 文章目录的格式
+toc:
+  on: true
+  # list_number: true # 有数字序号; false 无数字序号
+  # max_depth: 3 # 0-6 最大深度
+  # min_depth: 3 # 0-6 最小深度
+
+postStyle:
+  ## also the catalog's positon 同样也是目录的位置
+  authorInfoPosition: right # right, left
+  contentStyle: music # music microsoft github lapis gitbook(support not well)
+  color: "theme" # "theme" or "default" or "#xxxxxx" or "color name"
+  # "theme" means follow the theme color
+  # "default" means default suitable color
+  # Hex or color name 16进制的颜色或者颜色名字
+  ## style of code block
+  codeStyle:
+    style: tab # mac, tab
+    colorSet: sakura-light # sakura, sakura-light
+    # dark style or light style. This is only applied to styles not colorSet
+    light: true # false, true
+
+copyright:
+  on: true
+  simple: false
+  license: "CC BY-NC-SA 4.0"
+  fullName: "Attribution-NonCommercial-ShareAlike 4.0 International"
+  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  icon: "creative-commons"
+
+wordCount: false
+  
+# donate function 打赏功能
+donate:
+  on: true # false
+  methods:
+    - name: wechat
+      enabled: false 
+      description: WeChat
+      qrCode: /img/wechat.jpg
+    - name: alipay
+      enabled: true
+      description: Alipay
+      qrCode: /img/alipay.jpg
+    - name: zelle
+      enabled: true
+      description: Zelle®
+      qrCode: /img/zelle.jpg
+  defaultMethod: zelle
+  description: Like my post?
+
+# Comment function 评论功能
+valine:
+  on: true
+  appId: l3oy62Wr2irl9arSb6g7A2Tj-MdYXbMMI # App ID
+  appKey: nTzjKIWYitgRpJ4AyX6i3Wyy # App Key
+  verify: true # 验证码
+  notify: true # 评论回复邮箱提醒
+  avatar: 'mp' # 匿名者头像选项 https://valine.js.org/avatar.html
+  placeholder: Leave your email address so you can get reply from me!
+  lang: en
+  guest_info: nick,mail,link
+  pageSize: 10
+  serverURLs: https://l3oy62wr.api.lncldglobal.com
+  fancyStyle:
+    on: true
+    light: "#252c74" # colors in post page
+    dark: "#ffdd40"  # colors in other dark page
+
+##### Post settings
+
+# Default post cover image 默认的文章封面
+PostDefaultImage: https://s1.ax1x.com/2020/04/25/J6iz9K.jpg
+
+# Content may be out of date reminder 文章内容可能过期提醒
+# Or you can use it in your md file 
+# Warning: true  # write this in your md file
+Warning:
+  on: false # if is true, every article have this note 如果选择true，所有的文章都带有提示信息
+  Days: 5 # Day,  after these days, your post will show out of date content
+  Content: "This article was written {} days ago. The content of the article may be out of date."
+
+######### footer social icons
+# we use font awesome to display the fonts 我们用的是font awesome来展示图标
+# XXX: "url_for(XXX)||icon name of XXX"
+# befor || is your site's url ||前面的是你的url
+# after || is your icons name in font awesome ||后面的是font awesome上面对应的图标的名字
+# add any other icons using the format 用这种格式可以添加别的图标
+contacts:
+  E-mail: " mailto:o_oyao@outlook.com || fas fa-fw fa-envelope"
+  # Tencent-Weibo: " || fa-brands fa-tencent-weibo"
+  # 知乎: " || fa-brands fa-zhihu"
+  # 微博: " ||fa-brands fa-weibo"
+  Wechat: " ||fa-brands fa-weixin"
+  X-Twitter: " ||fa-brands fa-twitter"
+  # Telegram: " ||fa-brands fa-telegram-plane"
+  # Stack-overflow: " ||fa-brands fa-stack-overflow"
+  # Skype: " ||fa-brands fa-skype"
+  QQ: " ||fa-brands fa-qq"
+  Pinterest: " ||fa-brands fa-pinterest-p"
+  Linkedin: " ||fa-brands fa-linkedin-in"
+  GitHub: " https://github.com/DyingDown ||fa-brands fa-github"
+  Facebook: " ||fa-brands fa-facebook-f"
+  # Google: "  ||fa-brands fa-google"
+  # Alipay: " ||fa-brands fa-alipay"  
+  Instagram: " ||fa-brands fa-instagram"
+  # Quora: " ||fa-brands fa-quora"
+  # Spotify: " ||fa-brands fa-spotify"
+  # YouTube: " ||fa-brands fa-youtube"
+  # Discord: " ||fa-brands fa-discord"
+  # 人人: " ||fa-brands fa-renren"
+  # Reddit: " ||fab fa-fw fa-reddit-alien"
+  # Snapchat: " ||fa-brands fa-snapchat-ghost"
+  TikTok: " ||fa-brands fa-tiktok"
+  # Whatsapp: "||fa-brands fa-whatsapp"
+  # Codepen: "||fa-brands fa-codepen"
+  # Meetup: "||fa-brands fa-meetup"
+  # Twitch: "||fa-brands fa-twitch"
+  # Steam: "||fa-brands fa-steam"
+  # Gitlab: "||fa-brands fa-gitlab"
+  
+
+# Year of site creation 网站成立年份
+since: 2019
+
+# Visite count
+# https://busuanzi.ibruce.info/
+visits:
+  on: true
+
+# show total post number at page bottom
+totalPost: true 
+
+# Back to Top button and go to comment button
+SideButtons:
+  style: "both" # "icon", word", "both"
+  Top:
+    on: true
+    color: "#e37a90" # "#e37a90" hex color
+  Comment:
+    on: true # if comment function is not on, then this button won't show
+    color: "#33a6dc" # "#33a6dc" hex color
+
+# Scroll bar style
+ScrollBar:
+  style: "bicolor" # "bicolor", "simple", "gradient"
+  color: "theme" # "default" "theme" "#459798"
+  radius: 10 # 0~xxx px, 
+  gradient:
+    color1: "skyblue"
+    color2: "purple"
+  
+    
+# Latex 
+# MathJax Support
+mathjax:
+  enable: true
+  per_page: true
+  cdn: https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+# CDN 
+# jsDelivr:
+#   on: true
+#   preURL: https://cdn.jsdelivr.net/gh/
+#   GitHubUsername: dyingdown
+#   repoName: dyingdown.github.io
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/last.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/Message.js
+- /js/last.js
+- /js/third-party/social-share.js
+- /js/third-party/qrcode.js
+- /js/third-party/tools.js
+- /js/third-party/clipboard.js
