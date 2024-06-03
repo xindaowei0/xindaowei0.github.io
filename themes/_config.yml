@@ -1,0 +1,77 @@
+title: 我的技术与生活——可乐的小站
+# 左侧栏名字
+author_name: Cola.
+
+# 左侧栏标签，只能两个
+tag1: 中二
+tag2: 宅
+
+# 左侧栏Github连接
+github_url: https://github.com/Aizener
+
+# 左侧栏座右铭，分两句
+motto_prev: “花有重开日，人无再少年”
+motto_last: “一个简单普通的男孩”
+
+# 小站部署日期（运营时间）
+public_date: 2022-02-16
+
+# 左侧栏菜单
+menu:
+  - [小站首页, '/', 'icon-shouye']
+  - [个人日志, '/log', 'icon-rizhi']
+  - [友情链接, '/link', 'icon-youqinglianjie']
+  - ['关于自己', '/about', 'icon-guanyuwomen']
+  - ['我的工具', '/tools', 'icon-gongju']
+
+# 友情连接：头像、名字、链接
+links:
+ - ['https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg', 'Hexo.', 'https://hexo.io/zh-cn/']
+
+# 右侧栏公告
+notice: Hello~大噶好。唔系可乐爱宅着，欢迎你们来到我的博客小站，希望能在这里收获到有用的东西哦！
+
+# 右侧音乐列表：歌名、作者、链接、封面
+musics:
+  - ['安河桥', '宋冬野', 'http://ting6.yymp3.net:82/new25/songdongye/11.mp3', 'https://img2.baidu.com/it/u=1260056724,1076343118&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500']
+  - ['卡布达', '暂无', 'music/kabuda.mp3', 'https://img2.baidu.com/it/u=705831265,2862720033&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500']
+  # - ['八连杀', '苏三', 'music/八连杀.mp3', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo0SWQx6YrNA8lElaG4OOKLkNkNzLO1PflKg&usqp=CAU']
+
+# 个人介绍
+likes:
+  - 姓名：杨祥
+  - 年龄：25
+  - 性别：♂
+  - 家乡：四川省雅安市某小镇
+  - 现居住地：四川省成都市武侯区
+  - 职业：Web前端开发
+  - 喜欢：打游戏，游泳，下象棋
+
+# 工具配置：封面，标题，介绍，链接
+tools:
+  # - ['https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/30e94204580a4dbd83a64d4f91a9a6e5~tplv-k3u1fbpfcp-no-mark:240:240:240:160.awebp?', 'PNG图片压缩器', '这是一款无损压缩PNG图片的在线工具，可以童工上传或拖动来批量压缩图片并打包下载', 'http://1.14.43.39:5000/']
+  - ['https://coke-cola.gitee.io/resume-page/assets/dark-f439b888.jpeg', '在线简历生成器', '一个免费的在线简历生成工具', 'https://coke-cola.gitee.io/resume-page/#/']
+
+# 右侧栏网站信息
+copyright: 蜀ICP备2022005384号-1
+
+
+# 是否开启文章评论 Valine:https://valine.js.org/configuration.htm
+comments:
+  enable: true
+  appId: 'Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz'
+  appKey: 'qOqoiUHhH1TGtLRUYURkLRQX'
+  placeholder: '请留下你宝贵的意见吧~'
+  meta: ['nick']
+  recordIP: true
+  visitor: true
+  enableQQ: true
+
+# 纪念模式 none: 不设置 all：全部置灰 index: 首页置灰
+gray: none
+
+# 日志篇幅超过1000字后隐藏（最大高度为1000px)，1000可为任意数值
+log_text_num: 1000
+
+# 版本号
+version: 1.0.2
