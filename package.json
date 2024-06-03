@@ -19,8 +19,18 @@
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
+    "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0"
-  }
+  },
+  "description": "- 注意事项 警告! \r - 建议官方完整底包 \r - 底包建议使用欧版eea(14.0.28.0)或者国行(1.0.0.11.08.DEV)或者更高刷入 \r - 从MIUI刷入需要格式化DATA 否则卡开机 \r - 刷入前一定要退出谷歌账号且移除SIM卡！否则无法过开机引导！ \r - 推荐使用群文件橙狐狸进行刷入TWRP也可以 \r ##  更新日志 \r ### 1. 此系统 Matrixx10.3.0 \r - 包括genshin火动画  \r - 修正了一些抖动和滞后 \r - 提高性能 \r - 与矩阵的最后一个来源同步 \r   错误修复 \r - 包括meme相机",
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "^10.4.0",
+    "should": "^13.2.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

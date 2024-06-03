@@ -8,7 +8,7 @@ subtitle: ''
 description: ''
 keywords:
 author: John Doe
-language: zh-CN
+language: zh-cn
 timezone: Asia/Shanghai
 
 # URL
@@ -96,7 +96,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Last
+theme: stun
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
