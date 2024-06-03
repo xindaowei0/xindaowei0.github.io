@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="<%- url_for('css/partial/article.css') %>" />
+
+<div class="article-container">
+  <div class="article">
+    <h1 class="article-title"><%- post.title %></h1>
+    <div class="article-info">
+      <div class="article-info--item">
+        <div class="article-info--info">
+          <% if (post.categories) { %>
+          <div class="article-info--categories">
+            <span>分类：</span>
+            <%- list_categories(post.categories, {
+              show_count: false,
+              style: false,
+              transform(str) {
+                return titlecase(str);
+              }
+            }) %>
+          </div>
+          <% } %>
+          <% if (post.tags) { %>
+          <div class="article-info--tags">
+            <span>标签：</span>
+            <%- post.tags ? list_tags(post.tags, { style: false, show_count: false, separator: '' }) : '' %>
+          </div>
+          <% } %>
+          <p class="article-info--date">日期：<%- date(post.date, 'YYYY-MM-DD HH:mm:ss') %></p>
+        </div>
+        <img src="<%- url_for(post.cover || '/imgs/default-cover.webp') %>" alt="" class="article-cover">
+      </div>
+    </div>
+    <article class="article-content markdown-body">
+      <%- post.content %>
+    </article>
+    <% if (theme.comments.enable) { %>
+    <div class="read-nums">
+      <!-- id 将作为查询条件 -->
+      <span id="<%- post.path %>" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">浏览量</em>
+        <i class="leancloud-visitors-count"></i>
+      </span>
+    </div>
+    <div class="comments-intro">
+      <h2>评论区</h2>
+      <p>欢迎你留下宝贵的意见，昵称输入QQ号会显示QQ头像哦~</p>
+    </div>
+    <div id="vcomments" class="vcomments"></div>
+    <% } %>
+  </div>
+  <div class="article-catelogue">
+    <div class="article-catelogue--wrapper">
+      <div class="catelogue catelogue-1">
+        <h3>目录</h3>
+        <%- toc(post.content) %>
+      </div>
+      <% if (page.prev || page.next) { %>
+        <div class="catelogue catelogue-2">
+          <% if (page.prev) { %>
+            <p>
+              <span>上一篇：</span>
+              <a href="/<%- page.prev.path -%>"><%- page.prev.title -%></a>
+            </p>
+          <% } %> 
+          <% if (page.next) { %>
+            <p>
+              <span>下一篇</span>
+              <a href="/<%- page.next.path -%>"><%- page.next.title -%></a>
+            </p>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<% if (theme.comments.enable) { %>
+<script>
+  // var定义，避免pjax重新进来造成的重复声明错误
+  var config = JSON.parse('<%- JSON.stringify(theme.comments) %>')
+  new Valine({
+    el: '#vcomments',
+    appId: config.appId,
+    appKey: config.appKey,
+    placeholder: config.placeholder,
+    meta: config.meta,
+    recordIP: config.recordIP,
+    visitor: config.visitor,
+    enableQQ: config.enableQQ,
+    path: '<%- post.path %>'
+  })
+</script>
+<% } %>
+
+<script>
+  $(document).on('pjax:complete', function() {
+    const tocs = document.querySelector('.toc')
+    const links = tocs ? tocs.querySelectorAll('a') : []
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        const href = decodeURIComponent(e.href)
+        href.search(/#(.*)/)
+        const id = RegExp.$1
+        const target = document.querySelector('#' + id)
+        const top = target.offsetTop
+        document.documentElement.scrollTo({
+          top: top - 100,
+          behavior: 'smooth'
+        })
+        e.preventDefault()
+      })
+    })
+  })
+</script>

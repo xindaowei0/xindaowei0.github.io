@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="<%- url_for('css/partial/categories.css') %>" />
+
+<div class="categories">
+  <h2 class="categories-title">小站分类</h2>
+  <div class="categories-list">
+    <%- list_categories(site.categories, {
+      class: 'categories'
+    }) %>
+  </div>
+</div>
