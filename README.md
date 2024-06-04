@@ -1,3 +1,19 @@
+![POCO F5 PRO/Redmi K60](https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1672220451.18454406.png)
+ 
+|                   基本 | 规格表                                                         |
+| ----------------------: | :----------------------------------------------------------------- |
+|                     SoC | 骁龙® 8+ Gen 1 （SM8475）                                     |
+|                     CPU | Octa-core CPU with 1x Cortex-X2 & 3x Cortex-A710 & 4x Cortex-A510  |
+|                    gpu GPU | Adreno 730                                                         |
+|                 运行    | 8/12/16 GB RAM (LPDDR5)                                            |
+| 发货的Android版本                 | 13.0 with MIUI 14                                                  |
+|                存储/运行 | 128/256/512/1024 GB (UFS 3.1)                                      |
+|               纯电池容量 | 5500 mAh,  不可拆卸                                            |
+|          屏幕材质及分辨率 | 1440 x 3200 像素，20：9 比例，6.67 英寸，30/60/90/120 赫兹，OLED |
+|                  摄像头  | 64MP（主）、8MP（超广角）、2MP（微距）                      |
+
+ 
+ 
  #   Redmi K60/Poco F5 Pro [mondrian] 发布 
 - 注意事项 警告! 
 - 建议官方完整底包 
